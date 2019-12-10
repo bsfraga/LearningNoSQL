@@ -1,17 +1,16 @@
 package mongoDBExampleCRUD.model;
 
 import java.util.ArrayList;
-import java.util.Map;
 import java.util.Objects;
 
-public class Cliente extends Usuario{
-	
+public class Cliente extends Usuario {
+
 	private String rede;
 	private String empresa;
-	private Map<String, Usuario> usuario;
 	private Usuario user;
 
-	public Cliente(String nome, String nomeLogin, String email, String rede, String empresa, ArrayList<String> sistema, ArrayList<String> perfilAcesso) {
+	public Cliente(String nome, String nomeLogin, String email, String rede, String empresa, ArrayList<String> sistema,
+			ArrayList<String> perfilAcesso) {
 		user = new Usuario();
 		user.setNome(nome);
 		user.setNomeLogin(nomeLogin);
@@ -21,16 +20,19 @@ public class Cliente extends Usuario{
 		user.setSistema(sistema);
 		user.setPerfilAcesso(perfilAcesso);
 	}
-	
+
 	public String getRede() {
 		return rede;
 	}
+
 	public void setRede(String rede) {
 		this.rede = rede;
 	}
+
 	public String getEmpresa() {
 		return empresa;
 	}
+
 	public void setEmpresa(String empresa) {
 		this.empresa = empresa;
 	}
@@ -67,5 +69,4 @@ public class Cliente extends Usuario{
 		this.user = user;
 	}
 
-	
 }
